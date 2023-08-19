@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+  </head>
+  <body>
+    <div id="privacyNotice">
+      <h1 id="privacyNoticeFormTitle">Forms</h1>
+      <h2>Privacy Notice</h2>
+      <p>We try to collect as little data as possible. Please read the following notice carefully to understand what we do collect.</p>
+      <h3>Browser Details</h3>
+      <h4>Cloudflare Turnstile</h4>
+      <p>
+        Cloudflare Turnstile is a service used on this site to prevent spam.
+        <br>
+        It may present a challenge that collects some browser details to determine whether the visitor is a bot.
+        Please see <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a> for more details.
+      </p>
+      <h4>Google Sites</h4>
+      <p>
+        This site is hosted using Google Sites with Google Analytics disabled.
+        <br>
+        However, Google may still collect some information for their own purposes.
+        Please see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> for more details.
+      </p>
+      <h3>Form Responses</h3>
+      <p>
+        Please see the privacy notice within the form.
+      </p>
+      <h2>Options</h2>
+      <div>
+        <label for="privacyNoticeAccept">Click the button below if you understand this notice and wish to continue to the form.</label>
+        <br>
+        <button id="privacyNoticeAccept">Accept</button>
+      </div>
+    </div>
+    <div id="turnstile"></div>
+    <iframe id="formFrame"></iframe>
+    <div id="messagePopup">
+      <p id="messageTitle">Testing</p>
+      <p id="messageText">Testing</p>
+      <button id="messageDismiss">Ok</button>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

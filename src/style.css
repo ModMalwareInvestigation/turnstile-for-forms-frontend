@@ -1,0 +1,117 @@
+:root {
+  color-scheme: light dark;
+  height: 100vh;
+}
+body {
+  font-family: "Roboto Light", "Arial", sans-serif;;
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+#privacyNotice {
+  width: 100vw;
+  height: 100vh;
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  flex-direction: column;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+#hidePrivacyNotice {
+  margin-bottom: 3em;
+}
+#privacyNoticeAccept {
+  margin-top: 2em;
+}
+#privacyNoticeSpacer {
+  height: 5em;
+}
+#turnstile {
+  z-index: 1;
+}
+.turnstileFadeOut {
+  animation-name: fadeOut;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+#formFrame {
+  position: absolute;
+  align-self: flex-start;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.formFrameFadeIn {
+  animation-name: fadeIn;
+  animation-delay: 1s;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+#messagePopup {
+  position: absolute;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/system-color */
+  /*noinspection CssInvalidPropertyValue*/
+  background-color: canvas;
+  min-width: 50vw;
+  max-width: 90vw;
+  border-radius: 2em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  filter: drop-shadow(.5em .5em 1em black);
+  z-index: 2;
+}
+.messagePopupFadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+.messagePopupFadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+#messageTitle {
+  margin-bottom: 0.5em;
+  font-size: x-large;
+}
+#messageText {
+  font-size: medium;
+}
+button {
+  position: relative;
+  align-items: flex-end;
+  padding: .5em 1.5em .5em 1.5em;
+  border: 0;
+  border-radius: 1em;
+  background-color: inherit;
+  box-shadow: 0 0 1em .25em lightgray;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  box-shadow: 0 0 .5em .75em gray;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
